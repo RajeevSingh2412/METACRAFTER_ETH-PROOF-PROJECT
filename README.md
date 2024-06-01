@@ -1,6 +1,6 @@
-# Hello World
+# VEDA's TOKEN CONTRACT
 
-This Solidity program is a simple "Hello World" program that demonstrates the basic syntax and functionality of the Solidity programming language. The purpose of this program is to serve as a starting point for those who are new to Solidity and want to get a feel for how it works.
+This Solidity program is a simple "TOKEN CONTRACT" program that demonstrates the great Indian Scripture VEDA  as a token denoted by VED along with total supply with a mint and burn function
 
 ## Description
 
@@ -14,18 +14,39 @@ To run this program, you can use Remix, an online Solidity IDE. To get started, 
 
 Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
 
-```javascript
-pragma solidity ^0.8.4;
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.25;
 
-contract HelloWorld {
-    function sayHello() public pure returns (string memory) {
-        return "Hello World!";
+contract MyToken {
+
+    // public variables here
+    string public token_name="VEDA";
+    string public token_abbr="VED";
+    uint public total_supply=0;
+
+    // mapping variable here
+    mapping(address => uint) public balances;
+
+    // mint function
+    function mint(address _address,uint _value) public{
+        total_supply+=_value;
+        balances[_address]=balances[_address]+_value;
     }
+
+    // burn function
+    function burn(address _address,uint _value) public{
+        if(balances[_address]>=_value){
+            total_supply-=_value;
+            balances[_address]-=_value;
+        }
+    }
+
 }
 
 ```
 
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile HelloWorld.sol" button.
+To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.25" (or another compatible version), and then click on the "Compile VedaToken.sol" button.
 
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "HelloWorld" contract from the dropdown menu, and then click on the "Deploy" button.
 
