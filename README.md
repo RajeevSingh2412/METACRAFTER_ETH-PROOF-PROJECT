@@ -1,6 +1,6 @@
 # VEDA's TOKEN CONTRACT
 
-This Solidity program is a simple "TOKEN CONTRACT" program that represents the great Indian Scripture VEDA as a token abbreviated by VED, along with functionalities for managing its total supply through minting and burning functions.
+This Solidity program is a simple "TOKEN CONTRACT" program that represents the great Indian Scripture VEDA as a token abbreviated by VED, along with functionalities for managing its total supply through mint and burn functions.
 
 ## DESCRIPTION
 
@@ -11,7 +11,7 @@ Additionally, it uses a mapping of addresses to balances, which enables the cont
 
 ### Executing Program
 
-To run this program, you can use Remix, an online Solidity IDE. Follow the steps below to get started:
+To run this program, we can use Remix, an online Solidity IDE. Follow the steps below to get started:
 
     1. Go to the Remix website at Remix Ethereum IDE.
     2. Create a new file by clicking on the "+" icon in the left-hand sidebar.
@@ -59,7 +59,7 @@ contract VedaToken {
         b. Select the "VedaToken" contract from the dropdown menu.
         c. Click on the "Deploy" button.
     5. Interacting with the Contract
-       Once the contract is deployed, you can interact with it by calling the mint and burn functions. You can also retrieve the values of the public variables 
+       Once the contract is deployed, you can interact with it by calling the mint and burn functions. We can also retrieve the values of the public variables 
        token_name, token_abbr, and total_supply.
 
 #### Mint Tokens:
